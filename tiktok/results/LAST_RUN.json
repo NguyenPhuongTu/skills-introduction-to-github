@@ -1,8 +1,8 @@
 {
-  "nonce": "20261124T082135Z-25555",
+  "nonce": "20261124T082322Z-1610",
   "url": "https://www.tiktok.com/@nguyenanhtung86/video/7184696429867175195",
-  "started_at": "2026-11-24T08:22:17.245730Z",
-  "status": "error",
-  "error": "TypeError: open() got an unexpected keyword argument 'metadata_errors'",
-  "finished_at": "2026-11-24T08:22:56.365444Z"
+  "started_at": "2026-11-24T08:24:09.821392Z",
+  "status": "ok",
+  "result_dir": "tiktok/results/7184696429867175195",
+  "finished_at": "2026-11-24T08:25:31.262745Z"
 }
