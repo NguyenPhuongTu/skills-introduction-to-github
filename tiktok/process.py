@@ -165,7 +165,12 @@ def transcribe(wav, model_name, lang):
     log(f"Nạp mô hình {model_name} ...")
     model = WhisperModel(model_name, device="cpu", compute_type="int8", cpu_threads=os.cpu_count() or 4)
     prompt = "Xin chào các bạn, hôm nay mình sẽ hướng dẫn các bạn cách làm." if lang in (None, "", "vi") else None
-    segs, info = model.transcribe(wav, language=lang or None, beam_size=5, vad_filter=True,
+    # tự đọc WAV 16 kHz mono -> mảng float32 (tránh lỗi tương thích PyAV khi đưa đường dẫn file)
+    import wave
+    import numpy as np
+    with wave.open(wav, "rb") as w:
+        audio = np.frombuffer(w.readframes(w.getnframes()), dtype=np.int16).astype(np.float32) / 32768.0
+    segs, info = model.transcribe(audio, language=lang or None, beam_size=5, vad_filter=True,
                                   initial_prompt=prompt, condition_on_previous_text=False)
     out = [{"start": s.start, "end": s.end, "text": s.text.strip()} for s in segs if s.text.strip()]
     return out, info.language, info.language_probability
