@@ -1,8 +1,8 @@
 {
-  "nonce": "20261124T082007Z-3997",
-  "url": "https://www.tiktok.com/@leenabhushan/video/6748451240264420610",
-  "started_at": "2026-11-24T08:20:50.881381Z",
+  "nonce": "20261124T082135Z-25555",
+  "url": "https://www.tiktok.com/@nguyenanhtung86/video/7184696429867175195",
+  "started_at": "2026-11-24T08:22:17.245730Z",
   "status": "error",
-  "error": "RuntimeError: Không tải được video.\nyt-dlp thất bại:\nERROR: [TikTok] 6748451240264420610: Your IP address is blocked from accessing this post\n\n---\nERROR: [TikTok] 6748451240264420610: Your IP address is blocked from accessing this post\n\n====\ntikwm lỗi: Url parsing is failed! Please check url.",
-  "finished_at": "2026-11-24T08:21:01.987950Z"
+  "error": "TypeError: open() got an unexpected keyword argument 'metadata_errors'",
+  "finished_at": "2026-11-24T08:22:56.365444Z"
 }
