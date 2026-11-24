@@ -1,3 +1,2 @@
-url=https://www.tiktok.com/@nguyenanhtung86/video/7184696429867175195
-nonce=20261124T082322Z-1610
-lang=vi
+url=https://vt.tiktok.com/ZSsF5bkrg/
+nonce=20261124T082853Z-25482
